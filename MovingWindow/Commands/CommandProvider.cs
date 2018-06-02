@@ -13,15 +13,16 @@ namespace MovingWindow.Commands
 
         public CommandProvider(IDirectionManager directionManager, ITimerProvider timerProvider, Form form)
         {
-            commands = new List<Command> {
-                new StartTimerCommand(timerProvider, new[]{Keys.Left, Keys.Right, Keys.Up, Keys.Down }),
-                new StopTimerCommand(timerProvider, new[]{Keys.Return}),
-                new LeftDirectionCommand(directionManager, new[]{Keys.Left }),
-                new RightDirectionCommand(directionManager, new[]{Keys.Right }),
-                new UpDirectionCommand(directionManager, new[]{Keys.Up }),
-                new DownDirectionCommand(directionManager, new[]{Keys.Down }),
-                new NoneDirectionCommand(directionManager, new[]{Keys.Return }),
-                new CenterCommand(form, new[]{Keys.Return }),
+            commands = new List<Command>
+            {
+                new StartTimerCommand(timerProvider, new[] { Keys.Left, Keys.Right, Keys.Up, Keys.Down }),
+                new StopTimerCommand(timerProvider, new[] { Keys.Return}),
+                new LeftDirectionCommand(directionManager, new[] { Keys.Left }),
+                new RightDirectionCommand(directionManager, new[] { Keys.Right }),
+                new UpDirectionCommand(directionManager, new[] { Keys.Up }),
+                new DownDirectionCommand(directionManager, new[] { Keys.Down }),
+                new NoneDirectionCommand(directionManager, new[] { Keys.Return }),
+                new CenterCommand(form, new[] { Keys.Return }),
             };
         }
 
